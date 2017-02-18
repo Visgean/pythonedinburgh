@@ -11,8 +11,8 @@
                 and also run other events.
             </p>
 
-            <h3>Upcoming Events</h3>
             {% if upcoming_events %}
+            <h3>Upcoming Events</h3>
             <ul class="list-unstyled">
                 {% for e in upcoming_events %}
                 <li>
@@ -21,10 +21,6 @@
                 </li>
                 {% endfor %}
             </ul>
-            {% else %}
-            <p>
-                There are no events arranged in the near future.
-            </p>
             {% endif %}
         </div>
         <div class="span4">
@@ -44,6 +40,11 @@
                         IRC:<a href="irc://irc.freenode.net/python-scotland">
                         #python-scotland</a> on Freenode
                     </li>
+
+                    <li><i class="icon-group"></i>
+                    Other <a href="http://www.pythonscotland.org/">Python groups</a> in Scotland
+                    </li>
+
                 </ul>
             </div>
             <div>
