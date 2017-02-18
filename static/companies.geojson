@@ -1,0 +1,16 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "SkyScanner",
+                "url": "https://www.skyscanner.net/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [55.94436,-3.1967116]
+            }
+        }
+    ]
+}

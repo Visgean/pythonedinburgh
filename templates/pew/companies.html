@@ -1,0 +1,32 @@
+{% extends "pew/base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+    <div class="row">
+
+    <div class="span12">
+        <h2>Python companies in Edinburgh | <a target="_blank" href="https://github.com/Visgean/pythonedinburgh/edit/master/static/companies.geojson">Add yours</a></h2>
+
+        {% include "pew/geojson_iframe.html" %}
+    </div>
+
+    <div class="span12">
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Website</th>
+      </tr>
+      {% for company in companies %}
+          <tr>
+              <td>{{ company.name }}</td>
+              <td><a href="{{company.url}}">{{company.url}}</a></td>
+          </tr>
+      {% endfor %}
+      </tr>
+    </table>
+    </div>
+
+    </div>  
+
+
+{% endblock %}

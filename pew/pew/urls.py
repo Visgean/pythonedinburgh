@@ -12,6 +12,7 @@ flatpages.register()
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^companies$', views.companies, name='companies'),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^events/', include(event_urls)),
