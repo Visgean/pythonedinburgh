@@ -37,3 +37,15 @@ class HomeViewTestCase(TestCase):
         request = self.factory.get('/')
         response = views.home(request)
         self.assertEqual(response.status_code, 200)
+
+
+class CompanyViewTestCase(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_companies(self):
+        """
+        Test that company geojson was found.
+        """
+        response = self.client.get('/companies')
+        self.assertEqual(response.status_code, 200)
