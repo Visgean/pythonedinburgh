@@ -7,11 +7,8 @@ def home(request):
     return render(
         request,
         'pew/home.html',
-        _home_context_dict()
-        )
+        {
+        	'upcoming_events': Event.upcoming.all()
+        }
+    )
 
-
-def _home_context_dict():
-    return {
-        'upcoming_events': Event.upcoming.all()
-    }
