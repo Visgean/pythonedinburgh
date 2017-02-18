@@ -1,4 +1,5 @@
 {% extends "pew/base.html" %}
+{% load static from staticfiles %}
 
 {% block content %}
 
@@ -22,6 +23,10 @@
                 {% endfor %}
             </ul>
             {% endif %}
+
+            <h2><a href="{% url "companies" %}">Map of Python companies</a></h2>
+            {% include "pew/geojson_iframe.html" %}
+
         </div>
         <div class="span4">
             <div class="well">
